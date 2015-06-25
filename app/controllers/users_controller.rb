@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show, :edit, :update]
 
   # GET /users
   # GET /users.json
@@ -28,7 +28,8 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        UserMailer.welcome_email(@user).deliver_later
+        format.html { redirect_to @user, notice: 'Awesome! Nice to meet you!' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
@@ -42,7 +43,7 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        format.html { redirect_to @user, notice: 'Your information has been update.' }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }

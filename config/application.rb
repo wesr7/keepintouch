@@ -28,7 +28,9 @@ module Kitapp
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-
+    config.action_mailer.default_url_options = { host: 'kitwithwes.com'}
+    config.action_mailer.delivery_method = :postmark
+    config.action_mailer.postmark_settings = { :api_toke => "284a8c9f-42a3-4dd6-af0f-9b38002cf14f"}
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
   end

@@ -3,6 +3,10 @@ class UserMailer < ApplicationMailer
 
     def welcome_email(user)
         @user = user
-        @url = 'https://keepintouch.herokuapp.com'
+        @url = 'https://kitwithwes.herokuapp.com'
+        mail(to: @user.email,
+            subject: "Nice Meeting You Today!",
+            template_path: 'user_mailer',
+            template_name: 'kit_email')
     end
 end

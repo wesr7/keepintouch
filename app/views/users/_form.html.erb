@@ -10,24 +10,35 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+<form class="form-horizontal">
+  <div class="form-group">
+    <%= f.label :name, { class: "col-sm-2 control-label"} %>
+    <div class= "col-sm-6">
+    <%= f.text_field :name, {class: 'form-control', placeholder: "Name"} %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :company %><br>
-    <%= f.text_field :company %>
+  <div class="form-group">
+    <%= f.label :company, {class: "col-sm-2 control-label"} %>
+    <div class= "col-sm-6">
+    <%= f.text_field :company, {class: 'form-control', placeholder: "Company"} %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
+  <div class="form-group">
+    <%= f.label :email, {class: "col-sm-2 control-label"} %>
+    <div class= "col-sm-6">
+    <%= f.text_field :email, {class: 'form-control', placeholder: "Email"} %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :phone %><br>
-    <%= f.text_field :phone %>
+  <div class="form-group">
+    <%= f.label :phone, {class: "col-sm-2 control-label"} %>
+    <div class= "col-sm-6">
+    <%= f.text_field :phone, {class: 'form-control', placeholder: "Email"} %>
+    </div>
   </div>
-  <div class="actions">
+  <br>
+  <div class="actions text-center">
     <%= f.submit %>
   </div>
-<% end %>
+  <% end %>
+  </form>
+
