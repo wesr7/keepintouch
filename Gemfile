@@ -47,3 +47,8 @@ group :development, :test do
   gem 'spring'
 end
 
+group :production do
+  gem 'thin' #better than webrick web server
+  gem 'rails_12factor' #for heroku
+end
+
