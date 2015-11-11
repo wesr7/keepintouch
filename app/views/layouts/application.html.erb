@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Kitapp</title>
+  <title>Wes Rodgers | Full Stack Developer</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <link href='http://fonts.googleapis.com/css?family=Pompiere' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="container" style="width: 100%; height: 100vh; background-size: cover; background-image: url(<%= asset_path 'typing.JPG' %>); background-position: center top;">
-<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">
-        <p>KITw/WES</p>
-      </a>
-    </div>
-  </div>
-</nav>
+<div class="container" style="width: 100%; height: 500px; background-size: cover; background-image: url(<%= asset_path 'typing.JPG' %>); background-position: center top; position: fixed; top: 0;">
+  <nav class="navbar navbar-default navbar-fixed-top navbar-inverse navbar-transparent">
+          <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="" name="" id="" class="" alt="" title="">wes rodgers</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav pull-right">
+                  <li><a class="" href="#about">About</a></li>
+                  <li><a class="" href="#portfolio">Portfolio</a></li>
+                  <li><a class="" href="#contact">Contact</a></li>
+                </ul>
+          </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+  </nav>
+</div>
 <%= yield %>
 
 </body>
