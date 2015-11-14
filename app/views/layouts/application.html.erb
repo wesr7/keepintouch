@@ -8,7 +8,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="container" style="width: 100%; height: 500px; background-size: cover; background-image: url(<%= asset_path 'typing.JPG' %>); background-position: center top; position: fixed; top: 0;">
+<div class="container">
   <nav class="navbar navbar-default navbar-fixed-top navbar-inverse navbar-transparent">
           <div class="container">
             <div class="navbar-header">
@@ -30,6 +30,15 @@
       </div>
     </nav>
   </nav>
+</div>
+<div class="main-image"></div>
+<div id="slide">
+  <ul class="slides">
+      <li class="slide"><img src="" alt=""></li>
+      <li class="slide"><img src="" alt=""></li>
+      <li class="slide"><img src="" alt=""></li>
+      <li class="slide"><img src="" alt=""></li>
+  </ul>
 </div>
 <%= yield %>
 
