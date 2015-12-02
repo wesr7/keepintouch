@@ -97,32 +97,61 @@
 .btn-yahoo:active,.btn-yahoo.active,.open>.dropdown-toggle.btn-yahoo{background-image:none}
 .btn-yahoo.disabled,.btn-yahoo[disabled],fieldset[disabled] .btn-yahoo,.btn-yahoo.disabled:hover,.btn-yahoo[disabled]:hover,fieldset[disabled] .btn-yahoo:hover,.btn-yahoo.disabled:focus,.btn-yahoo[disabled]:focus,fieldset[disabled] .btn-yahoo:focus,.btn-yahoo.disabled:active,.btn-yahoo[disabled]:active,fieldset[disabled] .btn-yahoo:active,.btn-yahoo.disabled.active,.btn-yahoo[disabled].active,fieldset[disabled] .btn-yahoo.active{background-color:#720e9e;border-color:rgba(0,0,0,0.2)}
 .btn-yahoo .badge{color:#720e9e;background-color:#fff}
+.bg-dark{ background-color: #7f8c8d;}
+
+
+header, nav, .navbar-lg, a, img, li, .logo {
+  transition: all .5s;
+  -moz-transition: all .5s; /* Firefox 4 */
+  -webkit-transition: all .5s; /* Safari and Chrome */
+  -o-transition: all .5s; /* Opera */
+}
 
 body {
-    color: #428bca;
+    color: white !important;
     font-family:'Pompiere', cursive;
     font-size: 20px;
 }
- .main-image {
+.navbar-default, .navbar-inverse {border: unset;}
+.navbar-lg{ height: 100px; padding-top: 20px;}
+.navbar-white {background-color: #34495e;}
+.text-centered{position: absolute;}
+.main-content{ width: 100%; position: absolute; color: white !important;}
+.contact-wrapper{background-color: #95a5a6; color: white; position: relative; width: 100%; height: auto;}
+.about-me-wrapper{position: absolute; top: 100%; height: 500px;}
+.about-me-image {border-radius: 250px; margin-top: 1%;}
+.about-me {width: 100%; height: auto;}
+.about-me-container{ }
+.about-me-row{}
+.my-title{margin-top: 100px;}
+.portfolio {background-color: #95a5a6; color: white; position: relative; height: 500px;}
+.technologies {background-color: #34495e; color: white; position: relative; height: auto;}
+.overlay {background-color: rgba(0,0,0,0.6); color: white; position: relative; height: 150px;}
+/*.contact-wrapper { position: absolute; top: 200%;  padding: 50vh 0;}*/
+.hdr-wrapper {
     width: 100%;
     height: 500px;
+
+}
+.hdr-image {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    background-image: url('typing_2_md.jpg');
     background-size: cover;
-    background-image: url( '../app/assets/images/typing.JPG');
     background-position: center top;
     position: fixed;
-    top: 0;
-}
-
+    }
 #slider {
     width: 100%;
-    height: 500px;
+    height: auto;
     overflow: hidden
 }
 
 #slider .slides {
     display: block;
-    width: 6000px;
-    height: 500px;
+    width: 100%;
+    height: auto;
     margin: 0;
     padding: 0;
 }
@@ -131,7 +160,14 @@ body {
     float: left;
     list-style-type: none;
     width: 100%;
-    height: 500px;
+    height: auto;
+}
+
+.img-versatile {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
 }
 
 
