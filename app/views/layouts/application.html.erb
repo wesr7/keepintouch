@@ -7,9 +7,9 @@
   <link href='http://fonts.googleapis.com/css?family=Pompiere' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body id="home">
 <div class="container">
-  <nav class="navbar navbar-default navbar-fixed-top navbar-inverse navbar-lg">
+  <nav data-scroll-header class="navbar navbar-default navbar-fixed-top navbar-inverse navbar-lg">
           <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -18,14 +18,15 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><img src="" name="" id="" class="" alt="" title="">wes rodgers</a>
+                <a class="navbar-brand navbar-brand-text"  data-scroll data-options='{"easing":"easeInOutQuad"}' href="#home"><img class="" src="" name="" id="" class="" alt="" title="">Wes Rodgers</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav pull-right">
-                  <li><a class="" href="#about">About</a></li>
-                  <li><a class="" href="#portfolio">Portfolio</a></li>
-                  <li><a class="" href="#contact">Contact</a></li>
-                  <li><a href="#blog">Blog</a></li>
+                  <li><a data-scroll data-options='{"easing":"easeInOutQuad"}' href="#about">About</a></li>
+                  <li><a data-scroll data-options='{"easing":"easeInOutQuad"}' class="" href="#technologies">Technologies</a></li>
+                  <li><a data-scroll data-options='{"easing":"easeInOutQuad"}' class="" href="#portfolio">Portfolio</a></li>
+                  <li><a data-scroll data-options='{"easing":"easeInOutQuad"}' class="" href="#contact">Contact</a></li>
+                 <!--  <li><a href="#blog">Blog</a></li> -->
                 </ul>
           </div><!--/.nav-collapse -->
       </div>
@@ -41,34 +42,47 @@
   </div>
 
 </div>
-<div class="main-content" >
+<div class="main-content" id="about">
   <div class="container-fluid text-center">
-    <div class="row technologies">
+    <div class="row technologies" data-midnight="navbar-blue">
       <div class="col-xs-12">
         <img src="<%=asset_path 'wes_rodgers_profile.jpg' %>" alt="" class="about-me-image ">
         <h1>Wes Rodgers</h1>
-        <h2>Front End Developer w/ Full Stack Developer Chops</h2>
+        <h4>Front End Developer w/ Full Stack Developer Chops</h4>
       </div>
     </div>
     <div class="row overlay">
       <div class="col-xs-12">
       </div>
     </div>
-    <div class="row">
-      <img class="about-me" src="<%=asset_path 'selah-beach.jpg' %>" alt="">
+    <div id="technologies" class="row" data-midnight="navbar-black">
       <div class="col-xs-12 about-me-wrapper">
-        <h1>Husband, Father, Developer, with a passion for javascript and music.</h1>
+        <h1>Technologies</h1>
       </div>
     </div>
     <div class="row overlay">
       <div class="col-xs-12">
       </div>
     </div>
-    <div class="row portfolio">
+    <div id="portfolio" class="row portfolio-1" data-midnight="navbar-white">
       <div class="col-xs-12">
         <h1>portfolio</h1>
       </div>
+      <div class="col-xs-12 col-sm-6">
+        <div style="height: 300px; width: 500px;" >
+          <a href="http://www.shredzilla.me"><img src="<%=asset_path 'shredzilla-main.jpg' %>" class="img-responsive" alt=""></a>
+        </div>
+      </div>
     </div>
+    <div class="row portfolio-2" data-midnight="navbar-grey">
+       <div class="col-xs-12 col-sm-6">
+        <div style="height: 300px; width: 500px; padding-top: 75px;">
+          <a href="http://grub1out.herokuapp.com"><img src="<%=asset_path 'grub1out-main.jpg' %>" class="img-responsive" alt=""></a>
+        </div>
+      </div>
+    </div>
+
+
     <div class="row overlay">
       <div class="col-xs-12">
       </div>
@@ -78,7 +92,7 @@
 
 
     <%= yield %>
-   <div class="container" style="background-color: black; width: 100%; height: 50px;" >
+   <div class="container" style="background-color: black; width: 100%; height: 100px;" >
     <div class="row">
       <div class="col-xs-12">
         <p>footer</p>
@@ -97,16 +111,33 @@
 
 <script>
 
-$(document).on("scroll", function(){
- if($(document).scrollTop()>=$('.hdr-image').height()-100){
-  $('.navbar').removeClass('navbar-lg');
-  $('.navbar').addClass('navbar-white');
- } else {
-  $('.navbar').removeClass('navbar-white');
-  $('.navbar').addClass('navbar-lg');
- }
+// Start midnight
+$(document).ready(function(){
+  $('.navbar-fixed-top').midnight();
 });
+ smoothScroll.init();
+// $(document).on("scroll", function(){
+//    if($(document).scrollTop() > 200){
+//     $('.navbar').removeClass('navbar-lg');
+//     $('.navbar').addClass('navbar-sm');
+//   } else {
+//     $('.navbar').addClass('navbar-lg');
+//     $('.navbar').removeClass('navbar-sm');
+//   }
 
+// });
+
+// $(document).on("scroll", function(){
+
+// });
+// $(window).load(function(){
+//   var overlayHeight = $('.about-me').height();
+//   $('.overlay-image').css('height', overlayHeight );
+// });
+// $(window).resize(function(){
+//    var overlayHeight = $('.about-me').height();
+//   $('.overlay-image').css('height', overlayHeight );
+// });
 function setTop(){
       var newTop = $('.hdr-image').height();
     $('.main-content').css('top', newTop);
@@ -122,6 +153,6 @@ $(window).resize(function(){
   setTop();
 
 });
-console.log($('.technologies').position().top);
+
 </script>
 </html>
