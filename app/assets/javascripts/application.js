@@ -4,6 +4,21 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+$(document).ready(function(){
+
+      var newTop = $('.hdr-image').height();
+    $('.main-content').css('top', newTop);
+    $('.main-content').css('height', newTop);
+
+});
+
+$(window).resize(function(){
+
+      var newTop = $('.hdr-image').height();
+    $('.main-content').css('top', newTop);
+    $('.main-content').css('height', newTop);
+
+});
 
 
 

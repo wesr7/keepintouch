@@ -113,6 +113,16 @@ body {
     font-size: 20px;
 }
 
+/** Button **/
+
+.btn, .btn-sm {border-radius: 0px;}
+
+/** List Styling **/
+.list-unstyled {list-style: none;}
+.list-unstyled li {display: inline;}
+.list-unstyled li a {font-size: 18px; margin: 15px 5px 5px;}
+
+/** Nav Bar **/
 .navbar-brand-text {font-size: 30px;}
 .navbar-default, .navbar-inverse {border: unset;}
 .navbar-lg{ height: 100px !important; padding-top: 20px !important;}
@@ -120,20 +130,25 @@ body {
 .midnightHeader.navbar-blue {background-color: #34495e; color: white !important;}
 .midnightHeader.navbar-black {background-color: black;}
 .midnightHeader.navbar-white {background-color: white;}
-.midnightHeader.navbar-grey {background-color: #ecf0f1;}
+.midnightHeader.navbar-light-grey {background-color: #ecf0f1;}
+.midnightHeader.navbar-grey {background-color: #7f8c8d;}
 .midnightHeader.navbar-transparent {background-color: transparent;}
-.text-centered{position: absolute;}
+
+/** Main Content **/
 .main-content{ width: 100%; position: absolute; color: white !important; height: 500px}
-.contact-wrapper{background-color: #95a5a6; color: white; position: relative; width: 100%; height: 500px;}
-.about-me-wrapper{position: relative; height: 500px; color: #9d9d9d; background-color: black;}
+.contact-wrapper{background-color: #95a5a6; color: white; position: relative; height: 500px;}
+.about-me-wrapper{position: relative; height: auto; color: #9d9d9d; background-color: black;}
 .about-me-image {border-radius: 250px; margin-top: 1%;}
 .about-me {width: 100%; height: auto;}
 .about-me-container{ }
 .about-me-row{}
 .my-title{margin-top: 100px;}
-.portfolio-1, .portfolio-2 { color: #9d9d9d; position: relative; height: 500px;}
-.portfolio-1 {background-color: white;}
-.portfolio-2 {background-color: #ecf0f1;}
+#portfolio {background-color: #ecf0f1; color: #9d9d9d;}
+.portfolio-1, .portfolio-2 { color: #9d9d9d; position: relative; height: auto;}
+.portfolio-1, .portfolio-2, .portfolio-3 {padding: 50px 0px;}
+.portfolio-1 {background-color: #ecf0f1;}
+.portfolio-2 {background-color: white;}
+.portfolio-3 {background-color: #7f8c8d;}
 .technologies {background-color: #34495e; color: #9d9d9d; position: relative; height: auto;}
 .overlay {background-color: rgba(0,0,0,0.6); color: white; position: relative; height: 150px;}
 .overlay-image{background-color: rgba(0,0,0,0.6); position: absolute; width: 100%; top: 9px; left: 0;}
