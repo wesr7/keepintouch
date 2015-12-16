@@ -30,6 +30,7 @@ gem 'bootstrap-social-rails'
 gem 'font-awesome-rails'
 gem 'simple_form'
 gem 'postmark-rails'
+gem 'tinymce-rails' # TinyMCE rich text editor for textareas
 # Use Unicorn as the app server
 # gem 'unicorn'
 
