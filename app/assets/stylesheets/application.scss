@@ -99,6 +99,17 @@
 .btn-yahoo .badge{color:#720e9e;background-color:#fff}
 .bg-dark{ background-color: #7f8c8d;}
 
+.navigator {
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+
+   li {
+        padding: 5px 0;
+        a {color: black;}
+    }
+
+}
 
 header, nav, .navbar-lg, a, img, li, .logo {
   transition: all .5s;
@@ -139,7 +150,7 @@ body {
 .midnightHeader.navbar-transparent {background-color: transparent;}
 
 /** Main Content **/
-.main-content{ width: 100%; position: absolute; color: white !important; height: 500px}
+.main-content{ width: 100%; position: absolute; color: white !important; height: 500px; top: 100px;}
 .contact-wrapper{background-color: #95a5a6; color: white; position: relative; height: auto; padding: 50px 0;}
 .about-me-wrapper{position: relative; height: auto; color: #9d9d9d; background-color: black;}
 .about-me-image {border-radius: 250px; margin-top: 1%;}
